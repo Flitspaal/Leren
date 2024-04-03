@@ -1,19 +1,28 @@
 #include "Robot.h"
-#include "string.h"
 
-using namespace std;
+#include "iostream"
 
-Robot::Robot(Positie *p): positie(*p) {    
+//using namespace std;
+
+
+Robot::Robot(std::string N) : rName(N) {
+	show();
 }
 
 Robot::~Robot() {
+	std::cout << "A robot has been deleted" << std::endl;
 }
 
-void Robot::run(){
-    positie.move(10,5);
+void Robot::giveName(std::string N) {
+	rName = N;
 }
 
-void Robot::show(){
-    cout<<"De coordinaten zijn: X = " << (positie.geefXcoord()) << ", Y = " << (positie.geefYcoord()) << endl;
+void Robot::show() const
+{
+	std::cout << "my name is: " << this->rName << std::endl;
+}
+
+void Robot::waarde() const
+{
 }
 

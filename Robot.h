@@ -1,21 +1,22 @@
 #ifndef ROBOT_H
 #define ROBOT_H
 
-#include "Positie.h"
-#include <iostream>
+
+#include <string>
 
 class Robot
 {
 private:
-    Positie positie;
+    std::string rName;
 
 public:
-
-    Robot(Positie *);
+    Robot() {};
+    Robot(std::string);
     ~Robot();
 
-    void run();
-    void show();
+    void giveName(std::string);
+    void show() const;
+    virtual void waarde() const;
 
 };
 
