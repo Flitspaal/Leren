@@ -18,13 +18,17 @@ void GoedkopeRobot::waarde() const
 
 int GoedkopeRobot::lampje()
 {
-	lamp = 1;
 	if (lamp == 0) {
 		lamp = 1;
 	} 
 	if (lamp == 1) {
 		lamp = 0;
 	}
-	else lamp = 0;
+	//else lamp = 0;
 	return lamp;
+}
+
+void GoedkopeRobot::setLampje(int s)
+{
+	lamp = s;
 }

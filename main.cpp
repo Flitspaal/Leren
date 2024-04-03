@@ -19,17 +19,25 @@ int main()
 	std::cout << std::endl;
 
 	// pointers
+	
+
 	F->show();
 	F->giveName("Sjaak");
+
 	G->giveName("Henk");
+
 	F->show();
 	G->show();
+	std::cout << std::endl;
+
 	F->waarde();
 	FF->waarde();
 	G->waarde();
-
 	GG->waarde();
+	std::cout << std::endl;
 
+
+	GG->setLampje(1);
 	for (int i = 0; i < 5; i++) {
 		int ii = GG->lampje();
 		std::cout << "status van lampje: " << ii << std::endl;

@@ -14,6 +14,7 @@ public:
 
 	void waarde() const;
 	int lampje();
+	void setLampje(int);
 
 };
 
