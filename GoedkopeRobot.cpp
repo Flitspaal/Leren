@@ -20,12 +20,18 @@ int GoedkopeRobot::lampje()
 {
 	if (lamp == 0) {
 		lamp = 1;
+		return lamp;
 	} 
 	if (lamp == 1) {
 		lamp = 0;
+		return lamp;
+	}
+	if (lamp >= 2 || lamp < 0) {
+		lamp = 0;
+		return lamp;
 	}
 	//else lamp = 0;
-	return lamp;
+	
 }
 
 void GoedkopeRobot::setLampje(int s)
