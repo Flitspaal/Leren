@@ -27,6 +27,9 @@ int main()
 	F->waarde();
 	FF->waarde();
 	G->waarde();
+
+	GG->waarde();
+
 	for (int i = 0; i < 5; i++) {
 		int ii = GG->lampje();
 		std::cout << "status van lampje: " << ii << std::endl;
