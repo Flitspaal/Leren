@@ -3,13 +3,13 @@
 
 class Positie {
  public:
-  Positie();
+  Positie() = default;
   Positie(int, int);
-  ~Positie();
+  ~Positie() = default;
 
   void movePosition(int, int);  // moves the position of the robot
-  int geefXcoord();             // returns x
-  int geefYcoord();             // returns y
+  int geefXcoord() const;             // returns x
+  int geefYcoord() const;             // returns y
 
  private:
   int x;  // x coord

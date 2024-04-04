@@ -6,9 +6,8 @@
 class GoedkopeRobot : public Robot {
  public:
   explicit GoedkopeRobot(float);
-  ~GoedkopeRobot();
 
-  void waarde() const;
+  void waarde() const override;
   int lampje();
   void setLampje(int);
 

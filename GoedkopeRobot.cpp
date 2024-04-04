@@ -2,11 +2,9 @@
 
 #include <iostream>
 
-GoedkopeRobot::GoedkopeRobot(float w) : Robot(w) {
+GoedkopeRobot::GoedkopeRobot(const float w) : Robot(w), lamp_(0) {
   std::cout << "Goedkope Robot" << std::endl;
 }
-
-GoedkopeRobot::~GoedkopeRobot() {}
 
 void GoedkopeRobot::waarde() const { std::cout << prijs_ << std::endl; }
 

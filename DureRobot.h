@@ -6,9 +6,8 @@
 class DureRobot : public Robot {
  public:
   explicit DureRobot(float);
-  ~DureRobot();
 
-  void waarde() const;
+  void waarde() const override;
 };
 
 #endif  // DUREROBOT_H

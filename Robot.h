@@ -5,18 +5,18 @@
 
 class Robot {
  public:
-  Robot();
+  Robot() = default;
   explicit Robot(std::string);
   explicit Robot(float);
   explicit Robot(float, std::string);
-  ~Robot();
+  virtual ~Robot();
 
-  void giveName(std::string);
+  void giveName(const std::string &);
   void show() const;
   virtual void waarde() const;
 
  protected:
-  float prijs_;
+  float prijs_ = 0.0f;
 
  private:
   std::string name_;
