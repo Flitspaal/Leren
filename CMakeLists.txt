@@ -5,8 +5,6 @@ project(LERENOFZ LANGUAGES CXX)
 add_executable(LERENOFZ main.cpp
     Robot.cpp
     Robot.h
-    Positie.cpp
-    Positie.h
     GoedkopeRobot.cpp
     GoedkopeRobot.h
     DureRobot.cpp
