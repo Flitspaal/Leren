@@ -142,13 +142,11 @@
     <ClCompile Include="..\..\DureRobot.cpp" />
     <ClCompile Include="..\..\GoedkopeRobot.cpp" />
     <ClCompile Include="..\..\main.cpp" />
-    <ClCompile Include="..\..\Positie.cpp" />
     <ClCompile Include="..\..\Robot.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\DureRobot.h" />
     <ClInclude Include="..\..\GoedkopeRobot.h" />
-    <ClInclude Include="..\..\Positie.h" />
     <ClInclude Include="..\..\Robot.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

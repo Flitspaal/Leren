@@ -16,6 +16,4 @@ void Robot::show() const { std::cout << "my name is: " << name_ << std::endl; }
 
 void Robot::waarde() const {}
 
-void Robot::setLampje(int t) const
-{
-}
+void Robot::setLampje(int t) const {}
