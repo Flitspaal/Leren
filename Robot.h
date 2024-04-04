@@ -17,6 +17,7 @@ public:
     void giveName(std::string);
     void show() const;
     virtual void waarde() const;
+    virtual void setLampje(int);
 
 };
 

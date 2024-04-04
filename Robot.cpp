@@ -26,3 +26,7 @@ void Robot::waarde() const
 {
 }
 
+void Robot::setLampje(int i)
+{
+}
+
