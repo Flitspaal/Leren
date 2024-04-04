@@ -3,19 +3,17 @@
 
 #include "Robot.h"
 
-class GoedkopeRobot : public Robot
-{
-private:
-	float prijs;
-	int lamp;
+class GoedkopeRobot : public Robot {
 public:
-	GoedkopeRobot(float);
+	explicit GoedkopeRobot(float);
 	~GoedkopeRobot();
 
 	void waarde() const;
 	int lampje();
 	void setLampje(int);
 
+private:
+	int lamp_;
 };
 
-#endif //GOEDKOPEROBOT_H
+#endif  // GOEDKOPEROBOT_H

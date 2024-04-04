@@ -7,9 +7,8 @@
 
 #include "iostream"
 
-int main()
-{
-	std::cout << "createing a robots" << std::endl;
+int main() {
+	std::cout << "creating a robot" << std::endl;
 	Robot R("Jhon");
 	Robot *F = new DureRobot(100000); //alows polymorphism
 	DureRobot *FF = new DureRobot(100001);
@@ -39,7 +38,7 @@ int main()
 	G->setLampje(1);
 
 	//dynamic cast:
-	GoedkopeRobot* robotCheck = dynamic_cast<GoedkopeRobot*>(G);
+	GoedkopeRobot* robotCheck = dynamic_cast<GoedkopeRobot*>(G); //you dont have to delete this.
 	if (robotCheck) {
 		std::cout << "G is pointing to a GoedkopeRobot" << std::endl;
 		robotCheck->setLampje(1);
@@ -56,7 +55,7 @@ int main()
 		int ii = GG->lampje();
 		std::cout << "status van lampje: " << ii << std::endl;
 	}
-
+	
 	std::cout << std::endl;
 
 	// deleting pointers

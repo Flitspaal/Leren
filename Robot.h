@@ -1,24 +1,26 @@
 #ifndef ROBOT_H
 #define ROBOT_H
 
-
 #include <string>
 
-class Robot
-{
-private:
-    std::string rName;
-
+class Robot {
 public:
-    Robot() {};
-    Robot(std::string);
-    ~Robot();
+	Robot();
+	explicit Robot(std::string);
+	explicit Robot(float);
+	explicit Robot(float, std::string);
+	~Robot();
 
-    void giveName(std::string);
-    void show() const;
-    virtual void waarde() const;
-    virtual void setLampje(int);
+	void giveName(std::string);
+	void show() const;
+	virtual void waarde() const;
+	virtual void setLampje(int) const;
 
+protected:
+	float prijs_;
+
+private:
+	std::string name_;
 };
 
-#endif // !ROBOT_H
+#endif  // !ROBOT_H

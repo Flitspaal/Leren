@@ -3,15 +3,12 @@
 
 #include "Robot.h"
 
-class DureRobot : public Robot
-{
-private:
-	float prijs;
+class DureRobot : public Robot {
 public:
-	DureRobot(float); 
+	explicit DureRobot(float);
 	~DureRobot();
 
 	void waarde() const;
 };
 
-#endif //DUREROBOT_H
+#endif  // DUREROBOT_H
