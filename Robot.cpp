@@ -1,6 +1,7 @@
 #include "Robot.h"
 
 #include <iostream>
+#include <string>
 
 Robot::Robot(std::string N) : name_(N) { show(); }
 

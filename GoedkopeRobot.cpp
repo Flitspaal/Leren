@@ -2,8 +2,6 @@
 
 #include <iostream>
 
-#include "Robot.h"
-
 GoedkopeRobot::GoedkopeRobot(float w) : Robot(w) {
   std::cout << "Goedkope Robot" << std::endl;
 }

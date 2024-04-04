@@ -1,8 +1,6 @@
 #ifndef POSITIE_H
 #define POSITIE_H
 
-#include <iostream>
-
 class Positie {
  public:
   Positie();
