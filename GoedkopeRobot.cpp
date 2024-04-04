@@ -1,40 +1,25 @@
 #include "GoedkopeRobot.h"
 
-#include "iostream"
+#include <iostream>
 
-GoedkopeRobot::GoedkopeRobot(float w) : prijs(w)
-{
-	std::cout << "Goedkope Robot" << std::endl;
+#include "Robot.h"
+
+GoedkopeRobot::GoedkopeRobot(float w) : Robot(w) {
+  std::cout << "Goedkope Robot" << std::endl;
 }
 
-GoedkopeRobot::~GoedkopeRobot()
-{
+GoedkopeRobot::~GoedkopeRobot() {}
+
+void GoedkopeRobot::waarde() const { std::cout << prijs_ << std::endl; }
+
+int GoedkopeRobot::lampje() {
+  if (!lamp_) {
+    lamp_ = 1;
+  } else if (lamp_) {
+    lamp_ = 0;
+  }
+
+  return lamp_;
 }
 
-void GoedkopeRobot::waarde() const
-{
-	std::cout << this->prijs << std::endl;
-}
-
-int GoedkopeRobot::lampje()
-{
-	if (lamp == 0) {
-		lamp = 1;
-		return lamp;
-	} 
-	if (lamp == 1) {
-		lamp = 0;
-		return lamp;
-	}
-	if (lamp >= 2 || lamp < 0) {
-		lamp = 0;
-		return lamp;
-	}
-	//else lamp = 0;
-	
-}
-
-void GoedkopeRobot::setLampje(int s)
-{
-	lamp = s;
-}
+void GoedkopeRobot::setLampje(int s) { lamp_ = s; }

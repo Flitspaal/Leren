@@ -1,17 +1,11 @@
 #include "DureRobot.h"
 
-#include "iostream"
+#include <iostream>
 
-DureRobot::DureRobot(float p) : prijs(p)
-{
-	std::cout << "DureRobot" << std::endl;
+DureRobot::DureRobot(float p) : Robot(p) {
+  std::cout << "DureRobot" << std::endl;
 }
 
-DureRobot::~DureRobot()
-{
-}
+DureRobot::~DureRobot() {}
 
-void DureRobot::waarde() const
-{
-	std::cout << this->prijs << std::endl;
-}
+void DureRobot::waarde() const { std::cout << prijs_ << std::endl; }
