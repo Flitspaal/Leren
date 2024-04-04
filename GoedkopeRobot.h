@@ -4,16 +4,15 @@
 #include "Robot.h"
 
 class GoedkopeRobot : public Robot {
-public:
-	explicit GoedkopeRobot(float);
-	~GoedkopeRobot();
+ public:
+  explicit GoedkopeRobot(float);
 
-	void waarde() const;
-	int lampje();
-	void setLampje(int);
+  void waarde() const override;
+  int lampje();
+  void setLampje(int);
 
-private:
-	int lamp_;
+ private:
+  int lamp_;
 };
 
 #endif  // GOEDKOPEROBOT_H

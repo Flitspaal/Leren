@@ -4,23 +4,22 @@
 #include <string>
 
 class Robot {
-public:
-	Robot();
-	explicit Robot(std::string);
-	explicit Robot(float);
-	explicit Robot(float, std::string);
-	~Robot();
+ public:
+  Robot() = default;
+  explicit Robot(std::string);
+  explicit Robot(float);
+  explicit Robot(float, std::string);
+  virtual ~Robot();
 
-	void giveName(std::string);
-	void show() const;
-	virtual void waarde() const;
-	virtual void setLampje(int) const;
+  void giveName(const std::string &);
+  void show() const;
+  virtual void waarde() const;
 
-protected:
-	float prijs_;
+ protected:
+  float prijs_ = 0.0f;
 
-private:
-	std::string name_;
+ private:
+  std::string name_;
 };
 
 #endif  // !ROBOT_H
