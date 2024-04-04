@@ -37,6 +37,16 @@ int main() {
   GG->waarde();
   std::cout << std::endl;
 
+  // check if G is pointing to a GoedkopeRobot, if so, cast it to GoedkopeRobot as a pointer that is const
+  if (const auto robotCheck = dynamic_cast<GoedkopeRobot *>(G)) {
+    std::cout << "G is pointing to a GoedkopeRobot" << std::endl;
+    robotCheck->setLampje(1);
+    std::cout << robotCheck->lampje() << std::endl; // Access specific functionality of GoedkopeRobot
+  } else {
+    std::cout << "is not pointing to a GoedkopeRobot" << std::endl;
+  }
+  std::cout << std::endl;
+
   GG->setLampje(1);
   for (int i = 0; i < 5; i++) {
     const int ii = GG->lampje();
