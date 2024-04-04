@@ -39,7 +39,7 @@ int main() {
 
   GG->setLampje(1);
   for (int i = 0; i < 5; i++) {
-    int ii = GG->lampje();
+    const int ii = GG->lampje();
     std::cout << "status van lampje: " << ii << std::endl;
   }
 
