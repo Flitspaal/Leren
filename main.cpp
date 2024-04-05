@@ -7,15 +7,29 @@
 int main() {
   std::cout << "creating a robots" << std::endl;
   Robot R("Jhon");
+  Robot RR(12, "Daan");
   Robot *F = new DureRobot(100000);  // alows polymorphism
   DureRobot *FF = new DureRobot(100001);
   Robot *G = new GoedkopeRobot(10);
   GoedkopeRobot *GG = new GoedkopeRobot(11);
+  
 
   std::cout << std::endl;
+  std::cout << "Smart Pointers " << std::endl;
+  // Smart pointers
+  std::unique_ptr<Robot>U(new GoedkopeRobot(10101)); // geen delete nodig
+  U->giveName("Bob");
+  U->show();
+
+  std::cout << "copy " << std::endl;
+  Robot U1 = *U;
+  U1.show();
+  
+  auto UU = std::make_unique<Robot>("Banana");
+  UU->show();
 
   // pointers
-
+  std::cout << "Pointers " << std::endl;
   F->show();
   F->giveName("Sjaak");
 
