@@ -3,22 +3,20 @@
 #include "DureRobot.h"
 #include "GoedkopeRobot.h"
 #include "Robot.h"
-#include "main.h"
 
 int main() {
   std::cout << "creating a robots" << std::endl;
   Robot R("Jhon");
   Robot RR(12, "Daan");
-  Robot *F = new DureRobot(100000);  // alows polymorphism
-  DureRobot *FF = new DureRobot(100001);
-  Robot *G = new GoedkopeRobot(10);
-  GoedkopeRobot *GG = new GoedkopeRobot(11);
+  Robot *F = new DureRobot(100000.0);  // alows polymorphism
+  DureRobot *FF = new DureRobot(100001.0);
+  Robot *G = new GoedkopeRobot(10.0);
+  GoedkopeRobot *GG = new GoedkopeRobot(11.0);
 
   // Smart pointers
   std::cout << std::endl << "Smart Pointers: Unique " << std::endl;
   
-  //std::unique_ptr<GoedkopeRobot>U(new Robot(101)); // geen delete nodig
-  std::unique_ptr<Robot>U(new GoedkopeRobot(101));
+  std::unique_ptr<Robot>U(new GoedkopeRobot(101.0));
   U->giveName("Bob");
   U->show();
 
@@ -35,7 +33,7 @@ int main() {
   //shared
   std::cout << std::endl << "Smart Pointers: Shared " << std::endl;
   
-  std::shared_ptr<Robot>S = std::make_shared<GoedkopeRobot>(101010);
+  std::shared_ptr<Robot>S = std::make_shared<GoedkopeRobot>(101010.0);
   S->giveName("Jan");
   S->show();
   S->waarde();
