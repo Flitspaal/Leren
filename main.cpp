@@ -3,6 +3,7 @@
 #include "DureRobot.h"
 #include "GoedkopeRobot.h"
 #include "Robot.h"
+#include "main.h"
 
 int main() {
   std::cout << "creating a robots" << std::endl;
@@ -12,14 +13,16 @@ int main() {
   DureRobot *FF = new DureRobot(100001);
   Robot *G = new GoedkopeRobot(10);
   GoedkopeRobot *GG = new GoedkopeRobot(11);
-  
 
-  std::cout << std::endl;
-  std::cout << "Smart Pointers " << std::endl;
   // Smart pointers
-  std::unique_ptr<Robot>U(new GoedkopeRobot(10101)); // geen delete nodig
+  std::cout << std::endl << "Smart Pointers: Unique " << std::endl;
+  
+  //std::unique_ptr<GoedkopeRobot>U(new Robot(101)); // geen delete nodig
+  std::unique_ptr<Robot>U(new GoedkopeRobot(101));
   U->giveName("Bob");
   U->show();
+
+  U->lampje();
 
   std::cout << "copy " << std::endl;
   Robot U1 = *U;
@@ -28,8 +31,18 @@ int main() {
   auto UU = std::make_unique<Robot>("Banana");
   UU->show();
 
+
+  //shared
+  std::cout << std::endl << "Smart Pointers: Shared " << std::endl;
+  
+  std::shared_ptr<Robot>S = std::make_shared<GoedkopeRobot>(101010);
+  S->giveName("Jan");
+  S->show();
+  S->waarde();
+
+  
   // pointers
-  std::cout << "Pointers " << std::endl;
+  std::cout << std::endl << "Pointers " << std::endl;
   F->show();
   F->giveName("Sjaak");
 
@@ -67,11 +80,13 @@ int main() {
     std::cout << "status van lampje: " << ii << std::endl;
   }
 
-  std::cout << std::endl;
+  std::cout << std::endl << "deleting" << std::endl;
 
   // deleting pointers
   delete F;
   delete FF;
   delete G;
   delete GG;
+
+  std::cout << std::endl << "deleting smart" << std::endl;
 }
