@@ -1,4 +1,5 @@
 #include <iostream>
+#include <list>
 
 #include "DureRobot.h"
 #include "GoedkopeRobot.h"
@@ -76,6 +77,20 @@ int main() {
   for (int i = 0; i < 5; i++) {
     const int ii = GG->lampje();
     std::cout << "status van lampje: " << ii << std::endl;
+  }
+
+  std::cout << std::endl << "List " << std::endl;
+  std::list <Robot> bots;
+  bots.push_back(R);
+  bots.push_back(RR);
+  bots.push_back(*F);
+  bots.push_back(*FF);
+  bots.push_back(*G);
+  bots.push_back(*GG);
+
+  std::list<Robot>::iterator i;
+  for (i = bots.begin(); i != bots.end(); i++) {
+      i->show();
   }
 
   std::cout << std::endl << "deleting" << std::endl;
