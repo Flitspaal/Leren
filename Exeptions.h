@@ -15,5 +15,4 @@ private:
 	int a_;
 	int b_;
 };
-
 #endif

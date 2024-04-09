@@ -15,7 +15,7 @@ void DureRobot::setLocatie(int a, int b) {
 	coords.first = a;
 	coords.second = b;
 	try {
-		if (a >= 0 && a <= 10)
+		if (check(a))
 			coords_.first = a;
 		else {
 			throw Exeptions(coords);
@@ -26,4 +26,11 @@ void DureRobot::setLocatie(int a, int b) {
 			throw Exeptions(coords);
 		}
 	} catch (Exeptions& e) { std::cerr << e.locatie_fout() << std::endl; }
+}
+
+bool check(int a) {
+	if (a >= 0 && a <= 10) {
+		return true;
+	}
+	return false;
 }
