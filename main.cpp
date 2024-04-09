@@ -17,6 +17,10 @@ int main() {
 
   std::cout << std::endl << "Exceptions " << std::endl;
   L->setLocatie(1, 110);
+  L->setLocatie(1, 10);
+  L->giveName("Locatie");
+  L->show();
+  L->waarde();
 
   // Smart pointers
   std::cout << std::endl << "Smart Pointers: Unique " << std::endl;
