@@ -16,6 +16,7 @@ class Robot {
   virtual void waarde() const;
   virtual void setLampje() const {};
   virtual void lampje() const {};
+  virtual void setLocatie(int,int) {};
 
  protected:
   float prijs_ = 0.0f;

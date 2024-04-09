@@ -13,6 +13,10 @@ int main() {
   DureRobot *FF = new DureRobot(100001.0);
   Robot *G = new GoedkopeRobot(10.0);
   GoedkopeRobot *GG = new GoedkopeRobot(11.0);
+  Robot* L = new DureRobot(200000.0, 2, 10);
+
+  std::cout << std::endl << "Exceptions " << std::endl;
+  L->setLocatie(1, 110);
 
   // Smart pointers
   std::cout << std::endl << "Smart Pointers: Unique " << std::endl;
