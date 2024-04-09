@@ -11,8 +11,8 @@ class DureRobot : public Robot {
   explicit DureRobot(float);
   explicit DureRobot(float, int, int);
 
-  void waarde() const override;
-  void setLocatie(int,int);
+  virtual void waarde() const override;
+  virtual void setLocatie(int,int);
 };
 
 #endif  // DUREROBOT_H

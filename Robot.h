@@ -11,8 +11,8 @@ class Robot {
   explicit Robot(float, std::string);
   virtual ~Robot();
 
-  void giveName(const std::string &);
-  void show() const;
+  virtual void giveName(const std::string &);
+  virtual void show() const;
   virtual void waarde() const;
   virtual void setLampje() const {};
   virtual void lampje() const {};

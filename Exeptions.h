@@ -9,6 +9,7 @@ class Exeptions : public std::exception
 {
 public:
 	Exeptions(std::pair<int, int>);
+	~Exeptions(){};
 	virtual std::string locatie_fout();
 private:
 	int a_;

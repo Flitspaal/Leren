@@ -6,10 +6,11 @@
 class GoedkopeRobot : public Robot {
  public:
   explicit GoedkopeRobot(float);
+  ~GoedkopeRobot() {};
 
-  void waarde() const override;
-  int lampje();
-  void setLampje(int);
+  virtual void waarde() const override;
+  virtual int lampje();
+  virtual void setLampje(int);
 
  private:
   int lamp_;
