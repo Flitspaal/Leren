@@ -5,15 +5,15 @@
 
 class GoedkopeRobot : public Robot {
  public:
-  explicit GoedkopeRobot(float);
-  ~GoedkopeRobot() {};
+	explicit GoedkopeRobot(float);
+	~GoedkopeRobot() {};
 
-  virtual void waarde() const override;
-  virtual int lampje();
-  virtual void setLampje(int);
+	virtual void waarde() const override;
+	virtual int lampje();
+	virtual void setLampje(int);
 
  private:
-  int lamp_;
+	int lamp_;
 };
 
 #endif  // GOEDKOPEROBOT_H
